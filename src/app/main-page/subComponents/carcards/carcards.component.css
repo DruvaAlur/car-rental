@@ -1,12 +1,16 @@
-html {
-    font-size: 62.5%;
+@font-face {
+    font-family: Plus Jakarta Sans;
+    src: url('https://fonts.googleapis.com/css?family=Plus Jakarta Sans') format("opentype");
+}
+
+.card{
+    border-radius: 1em;
 }
 
 body{
     background-color: #F6F7F9;
-    font-family: 'Plus Jakarta Sans'
+    font-family: Plus Jakarta Sans;
 }
-
 .card{
     display: flex;
     flex-direction: column;

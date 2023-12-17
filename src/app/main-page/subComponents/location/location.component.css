@@ -1,0 +1,74 @@
+
+
+.destinationContainer{
+    border-radius: 1em;
+    width: 58.2em;
+    height: 13.2em;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap:1.6em;
+    padding-top: 2.4em;
+    padding-left: 4.8em;
+}
+
+.pickupContainer{
+    display: flex;
+    flex-direction: row;
+    gap:0.5em;
+    align-items: center;
+}
+
+.pickupContainer p{
+    margin: 0px;
+}
+
+.detailsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 2.4em;
+}
+
+.pickupContainer p{
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: -2%;
+    color: #1A202C;
+    font-weight: bold;
+}
+
+.dropContainer{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.dropContainer p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0.2em;
+}
+
+.dropContainer select{
+    width: 11.8em;
+    outline: none;
+    border: none;
+    height: 2em;
+    color: #90A3BF; 
+    font-size: 1.2rem;
+}
+
+.headins{
+    line-height: 150%;
+    letter-spacing: -2%;
+    font-size: 1.6rem;
+    color: #1A202C;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

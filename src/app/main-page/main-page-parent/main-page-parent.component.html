@@ -1,3 +1,11 @@
+<app-header></app-header>
 <div class="cardContainer">
-    <app-carcards *ngFor="let i of [1,2,3]" class="card"></app-carcards>
+    <div class="container">
+        <app-location class="applocationdeails"></app-location>
+        <app-reverse></app-reverse>
+        <app-location class="applocationdeails"></app-location>
+    </div>
+    <div class="cards">
+        <app-carcards *ngFor="let i of [1,2,3]" class="card"></app-carcards>
+    </div>
 </div>

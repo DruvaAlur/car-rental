@@ -1,0 +1,75 @@
+header{
+    font-family: 'Plus Jakarta Sans';
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    height: 8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body{
+    background-color: #F6F7F9;
+    margin: 0px;
+}
+.company{
+    font-size: 3.2rem;
+    line-height: 150%;
+    letter-spacing: -3%;
+    font-weight: bold;
+    color: #3563E9;
+    margin: 0px;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searchDiv{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searchBar{
+    width: 49.2em;
+    height: 4.4em;
+    border-width: thin;
+    border-style: solid;
+    color: #C3D4E9;
+    border-radius: 7em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.searchBar input{
+    outline: none;
+    border: none;
+    margin-left: 2em;
+}
+
+.searchBar input::placeholder{
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: -2%;
+    
+}
+
+.profileDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.filterdiv{
+    /* justify-self: flex-end; */
+    margin-left: auto;
+}
