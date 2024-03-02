@@ -1,3 +1,4 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 header{
     font-family: 'Plus Jakarta Sans';
     background-color: #FFFFFF;
@@ -23,7 +24,47 @@ body{
     color: #3563E9;
     margin: 0px;
 }
-
+::ng-deep .mdc-line-ripple{
+    display: none !important;
+}
+::ng-deep .mat-mdc-text-field-wrapper{
+    background-color: transparent !important;
+}
+::ng-deep .mat-mdc-text-field-wrapper .mat-focused{
+    background-color: transparent !important;
+}
+::ng-deep .mat-focused{
+    background-color: transparent !important;
+}
+::ng-deep .mdc-text-field--focused{
+    background-color: transparent !important;
+}
+body { 
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .basic-container {
+    background-color: transparent;
+    height: 149%;
+    width: 100%;
+    padding-left: 10px;
+  }
+  
+  .version-info {
+    font-size: 8pt;
+    float: right;
+  }
+  
+  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label:not(.mat-empty):not(.mat-form-field-empty) {
+    color: green;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    color: grey;
+  }
+  
 .heading{
     display: flex;
     flex-direction: column;

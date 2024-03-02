@@ -1,0 +1,2 @@
+<app-carcards (rentNow)="commonMethods.rentNow($event)" *ngFor="let card of MainPageServices.searchedResults|async"
+    [data]="card" class="card"></app-carcards>

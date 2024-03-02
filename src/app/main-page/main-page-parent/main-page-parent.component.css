@@ -5,13 +5,16 @@
 .cards{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2em;
     background-color: #F6F7F9;
     padding: 6.4em;
     padding-top: 0px;
+    overflow-x: auto;
 }
-
+.cards::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for WebKit browsers */
+  }
 .applocationdeails{
     background-color: #F6F7F9;
     font-family: 'Plus Jakarta Sans';

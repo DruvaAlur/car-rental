@@ -113,6 +113,10 @@ img{
     align-items: center;
 }
 
+.carImage{
+    object-fit:contain
+}
+
 .flexBox{
     display: flex;
     flex-direction: row;
