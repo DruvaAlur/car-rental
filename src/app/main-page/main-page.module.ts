@@ -18,6 +18,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { SearchedResultComponent } from './searched-result/searched-result.component';
 import { CarDetailsComponent } from './car-details/car-details.component';
+import { ImagePreviewComponent } from './subComponents/image-preview/image-preview.component';
+import { CarDetailsCardComponent } from './subComponents/car-details-card/car-details-card.component';
+import { BillingPageComponent } from './billing-page/billing-page.component';
+import { BillingFormComponent } from './subComponents/billing-form/billing-form.component';
+import { BillingSummaryComponent } from './subComponents/billing-summary/billing-summary.component';
+import { MapComponentComponent } from './subComponents/map-component/map-component.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,14 @@ import { CarDetailsComponent } from './car-details/car-details.component';
     LocationComponent,
     ReverseComponent,
     SearchedResultComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    ImagePreviewComponent,
+    CarDetailsCardComponent,
+    BillingPageComponent,
+    BillingFormComponent,
+    BillingSummaryComponent,
+    MapComponentComponent,
+    ThankYouComponent
   ],
   imports: [
     MainPageRoutingModule,

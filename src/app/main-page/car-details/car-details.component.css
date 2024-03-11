@@ -1,3 +1,19 @@
 app-car-details{
     background-color: #F6F7F9;
 }
+.container{
+    display: flex;
+    gap: 1em;
+    margin-top: 20px;
+    padding: 20px;
+}
+app-image-preview{
+    border: solid 2px #3563E9;
+    padding: 20px;
+    border-radius: 1em;
+    width: 100%;
+}
+app-car-details-card{
+    margin-left: 4em;
+    border-radius: 1em;
+}

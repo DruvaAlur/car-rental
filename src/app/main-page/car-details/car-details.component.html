@@ -1,1 +1,5 @@
-<p>car-details works!</p>
+<div class="container">
+    <app-image-preview [data]="carDetails|async"></app-image-preview>
+    <app-car-details-card (rentNow)="commonMethods.rentNowForBilling($event)" [data]="carDetails|async"
+        class="card"></app-car-details-card>
+</div>

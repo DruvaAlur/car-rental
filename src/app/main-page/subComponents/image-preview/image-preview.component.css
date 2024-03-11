@@ -1,0 +1,24 @@
+.previewContainer {
+    width: 100%; /* Set width as needed */
+    height: 36em; /* Set height as needed */
+    border-radius: 1em;
+  }
+  
+.previewImages{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2.5em;
+}
+
+.previewImg{
+    height: 12.4em;
+    width: 14.8em;
+    border-radius: 1em;
+    margin: 10px;
+}
+
+.preview-container{
+    width: 100%;
+    height: 100%;
+}

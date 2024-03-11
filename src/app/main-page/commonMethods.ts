@@ -16,5 +16,8 @@ export class CommonMethods {
           this.MainPageService.setCarDetails(res);
           this.router.navigate(['/CarDetails'])
         })
-      }  
+    }  
+    rentNowForBilling(event:string){
+      this.router.navigate(['/billingInfo'])
+    }
 }

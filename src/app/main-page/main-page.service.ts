@@ -9,9 +9,9 @@ import {baseUrl} from '../../../environment'
 })
 export class MainPageService {
   cardContents:BehaviorSubject<any>=new BehaviorSubject([]);
-  cards:Observable<any>=this.cardContents.asObservable()
   carDetails:BehaviorSubject<any>=new BehaviorSubject('')
   searchedResult:BehaviorSubject<any> = new BehaviorSubject([])
+  selectedCarId:BehaviorSubject<any> = new BehaviorSubject('')
 
   get carDetail(){
     return this.carDetails as Observable<any>
@@ -30,7 +30,7 @@ export class MainPageService {
   }
 
   get cardContent(){
-    return this.cards
+    return this.cardContents as Observable<any>
   }
 
   constructor(private http: HttpClient,private sanitizer:DomSanitizer) { }
@@ -67,5 +67,9 @@ export class MainPageService {
 
   getCarById(id:string){
     return this.http.get(`${baseUrl}cars/getCarById?searchQuery=${id}`)
+  }
+
+  redirectToPayment(id:string){
+    return this.http.post(`${baseUrl}cars/checkout`,{carid:id})
   }
 }

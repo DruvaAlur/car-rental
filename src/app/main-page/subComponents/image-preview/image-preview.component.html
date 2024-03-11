@@ -1,0 +1,24 @@
+<!-- <div>
+    <div class="container">
+        <img src="../../../../assets/images/previewBackground.png" alt="Background Image" class="background-image">
+        <img src="../../../../assets/images/previewBackground.png" alt="Overlay Image" class="overlay-image imageCar">
+        <p class="overlay-image previewText">Sports car with the best design and acceleration</p>
+        <p class="overlay-image previewdesc">Sports car with the best design and acceleration</p>
+    </div>
+    <div>
+        <div>
+            <img src="+" alt="" srcset="">
+        </div>
+    </div>
+</div> -->
+
+<div>
+    <div class="previewContainer">
+        <img [src]="previewImage" alt="Background Image" class="preview-container">
+    </div>
+    <div class="previewImages">
+        <div *ngFor="let img of data.images;let i=index" (click)="changePreview(i)" class="previewImageContainer">
+            <img [src]="img" alt="previewImg" class="previewImg">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,120 @@
+<div class="container">
+    <div class="billinginfo card">
+        <div class="billingInfoHeader">
+            <h4>Billing Info</h4>
+            <div class="billingInfoHeader2">
+                <span>Please enter your billing info</span>
+                <span>Step 1 of 4</span>
+            </div>
+        </div>
+        <div class="formContainer" [formGroup]="billingForm">
+            <div class="inputWrapper">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Your name" formControlName="name" id="name">
+
+                <label for="name" class="error-block"
+                    *ngIf="billingForm.get('name')?.errors?.['required'] && (billingForm.get('name')?.dirty || billingForm.get('name')?.touched)">This
+                    Field
+                    is Required</label>
+            </div>
+            <div class="inputWrapper">
+                <label for="phoneNumber">Phone Number</label><input type="text" placeholder="Phone number"
+                    formControlName="phoneNumber" id="phoneNumber">
+                <label for="name" class="error-block"
+                    *ngIf="billingForm.get('phoneNumber')?.errors?.['required'] && (billingForm.get('phoneNumber')?.dirty || billingForm.get('phoneNumber')?.touched)">This
+                    Field
+                    is Required</label>
+            </div>
+            <div class="inputWrapper">
+                <label for="address">Address</label><input type="text" placeholder="Address" formControlName="address"
+                    id="address">
+                <label for="name" class="error-block"
+                    *ngIf="billingForm.get('name')?.errors?.['required'] && (billingForm.get('Address')?.dirty || billingForm.get('Address')?.touched)">This
+                    Field
+                    is Required</label>
+            </div>
+            <div class="inputWrapper">
+                <label for="town">Town/City</label><input type="text" placeholder="Town or City" formControlName="town"
+                    id="town">
+                <label for="name" class="error-block"
+                    *ngIf="billingForm.get('town')?.errors?.['required'] && (billingForm.get('town')?.dirty || billingForm.get('town')?.touched)">This
+                    Field
+                    is Required</label>
+            </div>
+        </div>
+    </div>
+    <div class="rentalinfo card">
+        <ng-container [formGroup]="pickUpForm">
+            <div class="billingInfoHeader">
+                <h4>Rental Info</h4>
+                <div class="billingInfoHeader2">
+                    <span>Please select your rental date</span>
+                    <span>Step 2 of 4</span>
+                </div>
+            </div>
+            <div class="pickup">
+                <input type="radio" checked id="radBtn"><label for="radBtn">Pick-Up</label>
+            </div>
+            <div class="formContainer">
+                <div class="inputWrapper">
+                    <label for="pickupLocation">Locations</label><input type="text" placeholder="SelectYour City"
+                        formControlName="pickupLocation" id="pickupLocation">
+                    <label for="name" class="error-block"
+                        *ngIf="pickUpForm.get('pickupLocation')?.errors?.['required'] && (pickUpForm.get('pickupLocation')?.dirty || pickUpForm.get('pickupLocation')?.touched)">This
+                        Field
+                        is Required</label>
+                </div>
+                <div class="inputWrapper">
+                    <label for="pickupDate">Date</label><input type="date" placeholder="Select your date"
+                        formControlName="pickupDate" id="pickupDate">
+                    <label for="name" class="error-block"
+                        *ngIf="pickUpForm.get('pickupDate')?.errors?.['required'] && (pickUpForm.get('pickupDate')?.dirty || pickUpForm.get('pickupDate')?.touched)">This
+                        Field
+                        is Required</label>
+                </div>
+                <div class="inputWrapper">
+                    <label for="pickupTime">Time</label><input type="time" placeholder="Select your time"
+                        formControlName="pickupTime" id="pickupTime">
+                    <label for="name" class="error-block"
+                        *ngIf="pickUpForm.get('pickupTime')?.errors?.['required'] && (pickUpForm.get('pickupTime')?.dirty || pickUpForm.get('pickupTime')?.touched)">This
+                        Field
+                        is Required</label>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container [formGroup]="dropOffForm">
+            <div class="dropoff">
+                <input type="radio" checked id="radBtn"><label for="radBtn">Drop-Off</label>
+            </div>
+            <div class="formContainer">
+                <div class="inputWrapper">
+                    <label for="dropLocation">Locations</label><input type="text" placeholder="SelectYour City"
+                        formControlName="dropLocation" id="dropLocation">
+                    <label for="name" class="error-block"
+                        *ngIf="dropOffForm.get('dropLocation')?.errors?.['required'] && (dropOffForm.get('dropLocation')?.dirty || dropOffForm.get('dropLocation')?.touched)">This
+                        Field
+                        is Required</label>
+                </div>
+                <div class="inputWrapper">
+                    <label for="dropDate">Date</label><input type="date" placeholder="Select your date"
+                        formControlName="dropDate" id="dropDate">
+                    <label for="name" class="error-block"
+                        *ngIf="dropOffForm.get('dropDate')?.errors?.['required'] && (dropOffForm.get('dropDate')?.dirty || dropOffForm.get('dropDate')?.touched)">This
+                        Field
+                        is Required</label>
+                </div>
+                <div class="inputWrapper">
+                    <label for="dropTime">Time</label><input type="time" placeholder="Select your time"
+                        formControlName="dropTime" id="dropTime">
+                    <label for="name" class="error-block"
+                        *ngIf="dropOffForm.get('dropTime')?.errors?.['required'] && (dropOffForm.get('dropTime')?.dirty || dropOffForm.get('dropTime')?.touched)">This
+                        Field
+                        is Required</label>
+                </div>
+            </div>
+        </ng-container>
+        <button (click)="redirectToPayment()">
+            <p>Rent Now</p>
+        </button>
+    </div>
+</div>
