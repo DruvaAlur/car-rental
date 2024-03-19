@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Plus Jakarta Sans;
+    src: url('https://fonts.googleapis.com/css?family=Plus Jakarta Sans') format("opentype");
+}
+
+.card{
+    border-radius: 1em;
+}
+
+body{
+    background-color: #F6F7F9;
+    font-family: Plus Jakarta Sans;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    height: 85%;
+    width: 90%;
+    justify-content: space-between;
+    padding: 2.4em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.likeBtn:hover{
+    fill: #ED3F3F;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heading p{
+    font-size: 2rem;
+    letter-spacing: -3%;
+    line-height: 150%;
+    font-weight: bold;
+    color: #1A202C;
+}
+
+.carType{
+    font-size: 1.4rem;
+    letter-spacing: -2%;
+    line-height: 150%;
+    font-weight: bold;
+    color: #90A3BF;
+}
+
+.featuresContainer p{
+    font-size: 1.4rem;
+    color: #90A3BF;
+    line-height: 150%;
+    font-weight: medium;
+    letter-spacing: -2%;
+    margin: 0.7em;
+}
+
+.priceContainer p{
+    font-size: 2rem;
+    color: #1A202C;
+    font-weight: bold;
+}
+.priceContainer span{
+    font-size: 1.4rem;
+    color: #90A3BF;
+    font-weight: bold;
+}
+.priceContainer button{
+    background-color: #3563E9;
+    width: 11.3em;
+    height: 4.2em;
+    border-radius: 0.4em;
+    border: #3563E9;
+}
+.priceContainer button p{
+    font-size: 1.6rem;
+    line-height: 150%;
+    font-weight:bold;
+    letter-spacing: -2%;
+    color: #FFFFFF;
+}
+.featuresContainer{
+    justify-content: space-around;
+}
+
+.priceContainer{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.priceContainer div{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+}
+
+.steering{
+    align-items: center;
+}
+
+.capacity{
+    align-items: center;
+}
+
+img{
+    width: 27.2em;
+    height: 8.4em;
+}
+
+.gasoline{
+    align-items: center;
+}
+
+.carImage{
+    object-fit:contain
+}
+
+.flexBox{
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    margin: 0px;
+}
+
+.imageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imageContainer div{
+    width: 264px;
+    height: 66px;
+    position: absolute;
+    background-image:linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+    margin-top: 4em;
+}

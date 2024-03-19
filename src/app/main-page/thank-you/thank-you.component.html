@@ -1,1 +1,5 @@
-<app-map-component></app-map-component>
+<div class="container">
+    <app-map-component #mapComponent></app-map-component>
+    <app-thank-you-card *ngIf="(MainPageService.carDetails | async) as carDetails" [carDetails]="carDetails"
+        (notify)="mapComponent.openMaps()"></app-thank-you-card>
+</div>

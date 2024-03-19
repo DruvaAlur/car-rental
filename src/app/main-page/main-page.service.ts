@@ -12,7 +12,7 @@ export class MainPageService {
   carDetails:BehaviorSubject<any>=new BehaviorSubject('')
   searchedResult:BehaviorSubject<any> = new BehaviorSubject([])
   selectedCarId:BehaviorSubject<any> = new BehaviorSubject('')
-
+  nominatimUrl:string='https://nominatim.openstreetmap.org/reverse';
   get carDetail(){
     return this.carDetails as Observable<any>
   }
@@ -71,5 +71,14 @@ export class MainPageService {
 
   redirectToPayment(id:string){
     return this.http.post(`${baseUrl}cars/checkout`,{carid:id})
+  }
+
+  getCityAndState(latitude: number, longitude: number): Observable<any> {
+    const url = `${this.nominatimUrl}?lat=${latitude}&lon=${longitude}&format=jsonv2`;
+    return this.http.get(url);
+  }
+
+  getStoreLocation(request:any){
+    return this.http.post(`${baseUrl}cars/getStoreLocation`,request)
   }
 }

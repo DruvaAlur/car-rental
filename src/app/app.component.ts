@@ -9,6 +9,16 @@ import { MainPageService } from './main-page/main-page.service';
 export class AppComponent {
   title = 'car-rental';
   constructor(
+    private mainPageService:MainPageService
   ){
+  }
+  ngOnInit(){
+    if(sessionStorage.getItem('carId')){
+      let carId:string=''
+      carId=sessionStorage.getItem('carId')!
+      this.mainPageService.getCarById(carId).subscribe((resp)=>{
+        this.mainPageService.setCarDetails(resp)
+      })
+    }
   }
 }

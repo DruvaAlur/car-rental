@@ -1,1 +1,12 @@
-#map { height: 100%; }
+#map { height: 100%;    }
+
+button{
+    font-size: 1.4rem;
+    letter-spacing: -2%;
+    line-height: 150%;
+    font-weight: bold;
+    background-color: #0368ff;
+    border: none;
+    color: #ffffff;
+    border-radius: 0.4em;
+}

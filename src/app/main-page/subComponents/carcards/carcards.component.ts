@@ -25,6 +25,7 @@ export class CarcardsComponent {
   }
 
   rentCarNow(event:string){
+    sessionStorage.setItem('carId',event)
     this.mainPageService.selectedCarId.next(event)
     this.rentNow.emit(event)
   }

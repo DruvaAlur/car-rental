@@ -25,6 +25,7 @@ import { BillingFormComponent } from './subComponents/billing-form/billing-form.
 import { BillingSummaryComponent } from './subComponents/billing-summary/billing-summary.component';
 import { MapComponentComponent } from './subComponents/map-component/map-component.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { ThankYouCardComponent } from './subComponents/thank-you-card/thank-you-card.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     BillingFormComponent,
     BillingSummaryComponent,
     MapComponentComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    ThankYouCardComponent
   ],
   imports: [
     MainPageRoutingModule,

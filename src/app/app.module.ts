@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +15,17 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-
+import { MainPageService } from './main-page/main-page.service';
+export function initializeApp(MainPageService: MainPageService) {
+  if(sessionStorage.getItem('carId')){
+    return () => MainPageService.getCarById(sessionStorage.getItem('carId')!).subscribe((res)=>{
+      console.log('yayyyyyyyyy ................. its working')
+      MainPageService.setCarDetails(res)
+    })
+  }else{
+    return () => {};
+  }
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +47,14 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatAutocompleteModule,
     
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      multi: true,
+      deps: [MainPageService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
