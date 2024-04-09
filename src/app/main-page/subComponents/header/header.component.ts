@@ -13,6 +13,7 @@ export class HeaderComponent {
   searchText:FormControl=new FormControl('');
   suggestions:{_id:string,name:string}[]=[]
   suggestionClicked:boolean=false;
+  isLoggedIn:boolean=false
   constructor(private mainPageService:MainPageService,private router: Router){
 
   }
@@ -28,6 +29,11 @@ export class HeaderComponent {
         this.suggestions=suggestions
       }
     )
+    this.mainPageService.checkStatus().subscribe((resp:any)=>{
+      if(resp.id){
+        this.isLoggedIn=true
+      }
+    })
   }
 
   onItemSelection(){

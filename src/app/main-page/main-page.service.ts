@@ -81,4 +81,10 @@ export class MainPageService {
   getStoreLocation(request:any){
     return this.http.post(`${baseUrl}cars/getStoreLocation`,request)
   }
+
+  checkStatus(){
+    return this.http.get(`${baseUrl}auth/checkStatus`,{
+      withCredentials: true,
+  })
+  }
 }

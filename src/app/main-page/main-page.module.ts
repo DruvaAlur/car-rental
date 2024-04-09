@@ -26,6 +26,7 @@ import { BillingSummaryComponent } from './subComponents/billing-summary/billing
 import { MapComponentComponent } from './subComponents/map-component/map-component.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { ThankYouCardComponent } from './subComponents/thank-you-card/thank-you-card.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ThankYouCardComponent } from './subComponents/thank-you-card/thank-you-
     ThankYouCardComponent
   ],
   imports: [
+    CommonModule,
     MainPageRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -53,7 +55,6 @@ import { ThankYouCardComponent } from './subComponents/thank-you-card/thank-you-
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    BrowserAnimationsModule,
     MatAutocompleteModule,
     // HttpClient
   ]

@@ -1,0 +1,125 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+}
+.loginText{
+    font-weight: bold;
+    color: burlywood;
+    margin: 0px;
+}
+.company{
+    /* font-size: 2.2rem; */
+    line-height: 150%;
+    letter-spacing: -3%;
+    font-weight: bold;
+    color: #3563E9;
+    margin: 0px;
+}
+
+input[type="text"]{
+    width: 30.6em;
+    height: 4em;
+    border-radius: 1em;
+    fill: #F6F7F9;
+    background-color: #F6F7F9;
+    border: #FFFFFF;
+    padding-left: 40px;
+}
+label{
+    font-size: 1.3rem;
+    line-height: 150%;
+}
+.formContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap ;
+    gap: 2em;
+    margin-top: 20px;
+}
+button{
+    background-color: #3563E9;
+    width: 10em;
+    height: 3.2em;
+    border-radius: 0.4em;
+    border: #3563E9;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 40px;
+    padding: 0px;
+}
+
+button p{
+    font-size: 1.6rem;
+    line-height: 150%;
+    font-weight:bold;
+    letter-spacing: -2%;
+    color: #FFFFFF;
+    margin: 0px;
+}
+.orline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+.line {
+    width: 45%; /* Adjust width as needed */
+    height: 0.5px; /* Adjust thickness as needed */
+    background-color: black; /* Adjust color as needed */
+  }
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 45%;
+    gap: 15px;
+}
+.imgContainer{
+    /* height: 99vh; */
+    /* padding: 10px; */
+    width: 50%;
+    /* height: 90%; */
+}
+
+/* .background-div {
+    background-image: url('../../../assets/images/TRAVEL-ILLUSTRSTOR.PNG'); 
+    background-size: cover; 
+    background-position: center; 
+  } */
+.loginContainer{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 50%;
+    align-items: center;
+}
+.googleContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+span{
+    font-size: 1.2rem;
+}
+.newUser{
+    margin-top: 2em;
+}
+img{
+    height: 100vh;
+    width: 100%;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}

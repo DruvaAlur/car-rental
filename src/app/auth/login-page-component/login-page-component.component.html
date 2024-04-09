@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="imgContainer">
+        <img src="../../../assets/images/TRAVEL-ILLUSTRSTOR.PNG" alt="Travelling photo" srcset="">
+    </div>
+    <app-login [@slideInOut] *ngIf="this.authService.loginCompFlag|async" class="loginContainer"></app-login>
+    <app-signup [@slideInOut] *ngIf="!(this.authService.loginCompFlag|async)" class="signUpContainer"></app-signup>
+</div>

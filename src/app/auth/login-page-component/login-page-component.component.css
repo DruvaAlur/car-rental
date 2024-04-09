@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+}
+.imgContainer{
+    /* height: 99vh; */
+    /* padding: 10px; */
+    width: 50%;
+    /* height: 90%; */
+}
+.loginContainer{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 50%;
+    align-items: center;
+}
+.signUpContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+img{
+    height: 100vh;
+    width: 100%;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}

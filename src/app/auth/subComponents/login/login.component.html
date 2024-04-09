@@ -1,0 +1,33 @@
+<ng-container>
+    <h1 class="company">Login to continue</h1>
+    <!-- <h4 class="loginText">login or signup to continue</h4> -->
+    <ng-container [formGroup]="loginForm">
+        <div class="formContainer">
+            <div class="inputWrapper">
+                <label for="pickupLocation">Email</label><input formControlName="email" type="text"
+                    placeholder="Email id" id="pickupLocation">
+            </div>
+        </div>
+        <div class="formContainer">
+            <div class="inputWrapper">
+                <label for="pickupLocation">Password</label><input formControlName="password" type="text"
+                    placeholder="Password" id="pickupLocation">
+            </div>
+        </div>
+    </ng-container>
+    <button (click)="login()">
+        <p>Login</p>
+    </button><br>
+    <div class="orline">
+        <div class="line"></div>
+        <span>or</span>
+        <div class="line"></div>
+    </div><br>
+    <div class="googleContainer">
+        <asl-google-signin-button>
+            <button type="button" (click)="loginWithGoogle()" class="btn btn-danger">Login with Google</button>
+        </asl-google-signin-button>
+        <span (click)="loginWithGoogle()">Login with Google</span>
+    </div>
+    <span class="newUser">new User? <span style="color: blue;" (click)="signUpUser()">signin</span></span>
+</ng-container>
