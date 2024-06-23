@@ -1,11 +1,41 @@
 app-car-details{
     background-color: #F6F7F9;
 }
+
+button{
+    background-color: #3563E9;
+    width: 11.3em;
+    height: 4.2em;
+    border-radius: 0.4em;
+    border: #3563E9;
+}
+
+button p{
+    font-size: 1.6rem;
+    line-height: 150%;
+    font-weight:bold;
+    letter-spacing: -2%;
+    color: #FFFFFF;
+    margin: 0px;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    padding: 2.4em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+}
 .container{
     display: flex;
     gap: 1em;
     margin-top: 20px;
     padding: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 app-image-preview{
     border: solid 2px #3563E9;

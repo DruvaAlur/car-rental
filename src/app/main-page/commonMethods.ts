@@ -17,7 +17,9 @@ export class CommonMethods {
           this.router.navigate(['/CarDetails'])
         })
     }  
-    rentNowForBilling(event:string){
+    rentNowForBilling(event:string,pickup:any,dropOff:any){
+      this.MainPageService.pickUp.next(pickup)
+      this.MainPageService.dropOff.next(dropOff)
       this.router.navigate(['/billingInfo'])
     }
 }

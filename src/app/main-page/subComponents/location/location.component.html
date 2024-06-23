@@ -8,10 +8,10 @@
             {{heading}}
         </p>
     </div>
-    <div class="detailsContainer">
+    <div class="detailsContainer" [formGroup]="locationForm">
         <div class="dropContainer">
             <p class="headins">Locations</p>
-            <select name="" id="" class="dropdown">
+            <select name="" id="" class="dropdown" formControlName="location">
                 <option value="" class="defaultSelect">Select your city</option>
             </select>
         </div>
@@ -20,16 +20,14 @@
         </svg>
         <div class="dropContainer">
             <p class="headins">Date</p>
-            <input type="date" class="datePicker">
+            <input type="date" class="datePicker" formControlName="date">
         </div>
         <svg width="1" height="48" viewBox="0 0 1 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="0.5" y1="0.5" x2="0.5" y2="47.5" stroke="#C3D4E9" stroke-opacity="0.4" stroke-linecap="round" />
         </svg>
         <div class="dropContainer">
             <p class="headins">Time</p>
-            <select name="" id="" class="dropdown">
-                <option value="" class="defaultSelect">Select your time</option>
-            </select>
+            <input class="timeIp" type="time" formControlName="time">
         </div>
     </div>
 </div>

@@ -1,5 +1,15 @@
 <div class="container">
     <app-image-preview [data]="carDetails|async"></app-image-preview>
-    <app-car-details-card (rentNow)="commonMethods.rentNowForBilling($event)" [data]="carDetails|async"
-        class="card"></app-car-details-card>
+    <app-car-details-card [data]="carDetails|async"></app-car-details-card>
+</div>
+<div class="container">
+    <div class="card">
+        <app-location [data]="parentData" #pickUp [heading]="'Pick - Up'" class="applocationdeails"></app-location>
+    </div>
+    <div class="card">
+        <app-location [data]="parentData" #dropOff [heading]="'Drop - Off'" class="applocationdeails"></app-location>
+    </div>
+    <button (click)="rentNow()">
+        <p>Rent Now</p>
+    </button>
 </div>

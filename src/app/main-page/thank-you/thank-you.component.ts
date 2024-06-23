@@ -7,6 +7,7 @@ import { MainPageService } from '../main-page.service';
   styleUrls: ['./thank-you.component.css']
 })
 export class ThankYouComponent {
+  parentData:any={}
   constructor(public MainPageService:MainPageService){}
   ngOnInit(){
     let carId;

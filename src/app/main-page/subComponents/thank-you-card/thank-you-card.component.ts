@@ -10,7 +10,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ThankYouCardComponent {
   @Input()carDetails:any 
   @Output() notify: EventEmitter<void> = new EventEmitter<void>();
-  parentData:any={}
   src:any
   carDetail:any
   dropOffForm: FormGroup;

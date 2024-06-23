@@ -12,6 +12,8 @@ export class MainPageService {
   carDetails:BehaviorSubject<any>=new BehaviorSubject('')
   searchedResult:BehaviorSubject<any> = new BehaviorSubject([])
   selectedCarId:BehaviorSubject<any> = new BehaviorSubject('')
+  dropOff:BehaviorSubject<any> = new BehaviorSubject({})
+  pickUp:BehaviorSubject<any> = new BehaviorSubject({})
   nominatimUrl:string='https://nominatim.openstreetmap.org/reverse';
   get carDetail(){
     return this.carDetails as Observable<any>
@@ -85,6 +87,6 @@ export class MainPageService {
   checkStatus(){
     return this.http.get(`${baseUrl}auth/checkStatus`,{
       withCredentials: true,
-  })
+    })
   }
 }

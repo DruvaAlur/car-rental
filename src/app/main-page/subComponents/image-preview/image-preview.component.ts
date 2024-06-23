@@ -11,9 +11,17 @@ export class ImagePreviewComponent {
   constructor(){
 
   }
+
   ngOnInit(){
+    if(this.data.images){
+      this.previewImage=this.data.images[0]
+    }
+  }
+
+  ngOnChanges(){
     this.previewImage=this.data.images[0]
   }
+  
   changePreview(i:number){
     this.previewImage=this.data.images[i]
   }

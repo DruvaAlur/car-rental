@@ -3,6 +3,13 @@
     src: url('https://fonts.googleapis.com/css?family=Plus Jakarta Sans') format("opentype");
 }
 
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .card{
     border-radius: 1em;
 }
@@ -37,7 +44,7 @@ body{
     letter-spacing: -3%;
     line-height: 150%;
     font-weight: bold;
-    color: #1A202C;
+    color: #3563E9;
 }
 
 .carType{
@@ -45,7 +52,7 @@ body{
     letter-spacing: -2%;
     line-height: 150%;
     font-weight: bold;
-    color: #90A3BF;
+    
 }
 
 .featuresContainer p{

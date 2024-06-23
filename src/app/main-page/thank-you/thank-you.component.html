@@ -1,5 +1,10 @@
 <div class="container">
     <app-map-component #mapComponent></app-map-component>
-    <app-thank-you-card *ngIf="(MainPageService.carDetails | async) as carDetails" [carDetails]="carDetails"
-        (notify)="mapComponent.openMaps()"></app-thank-you-card>
+    <app-thank-you-card class="thankYouCard" *ngIf="(MainPageService.carDetails | async) as carDetails"
+        [carDetails]="carDetails" (notify)="mapComponent.openMaps()"></app-thank-you-card>
 </div>
+<div class="container">
+    <app-location [data]="parentData" [heading]="'Pick - Up'" class="applocationdeails"></app-location>
+    <app-location [data]="parentData" [heading]="'Drop - Off'" class="applocationdeails"></app-location>
+</div>
+<app-car-details></app-car-details>

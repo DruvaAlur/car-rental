@@ -8,16 +8,11 @@ import { MainPageService } from '../../main-page.service';
 })
 export class CarDetailsCardComponent {
   @Input() data:any;
-  @Output() rentNow = new EventEmitter<string>()
   src:any;
   constructor(private mainPageService:MainPageService){
     
   }
   ngOnInit(){
     console.log(this.data)
-  }
-
-  rentCarNow(event:string){
-    this.rentNow.emit(event)
   }
 }
