@@ -13,6 +13,9 @@
             <p class="headins">Locations</p>
             <select name="" id="" class="dropdown" formControlName="location">
                 <option value="" class="defaultSelect">Select your city</option>
+                <option *ngFor="let city of cityList" value={{city.cityName}} class="defaultSelect">{{city.cityName}}
+                </option>
+
             </select>
         </div>
         <svg width="1" height="48" viewBox="0 0 1 48" fill="none" xmlns="http://www.w3.org/2000/svg">
