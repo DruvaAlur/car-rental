@@ -16,6 +16,13 @@ export class MainPageService {
   pickUp: BehaviorSubject<any> = new BehaviorSubject({});
   citiesList: BehaviorSubject<any> = new BehaviorSubject([]);
   nominatimUrl: string = 'https://nominatim.openstreetmap.org/reverse';
+
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+    if (sessionStorage.getItem('carId')) {
+      this.selectedCarId.next(sessionStorage.getItem('carId'));
+    }
+  }
+
   get carDetail() {
     return this.carDetails as Observable<any>;
   }
@@ -35,8 +42,6 @@ export class MainPageService {
   get cardContent() {
     return this.cardContents as Observable<any>;
   }
-
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
   getAllCards() {
     this.http.get(`${baseUrl}cars/getAllCars`).subscribe(

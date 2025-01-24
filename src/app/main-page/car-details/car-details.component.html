@@ -4,10 +4,12 @@
 </div>
 <div class="container">
     <div class="card">
-        <app-location [data]="parentData" #pickUp [heading]="'Pick - Up'" class="applocationdeails"></app-location>
+        <app-location [data]="parentData" #pickUp [heading]="'Pick - Up'" [formData]="mainPageServices.pickUp|async"
+            class="applocationdeails"></app-location>
     </div>
     <div class="card">
-        <app-location [data]="parentData" #dropOff [heading]="'Drop - Off'" class="applocationdeails"></app-location>
+        <app-location [data]="parentData" #dropOff [heading]="'Drop - Off'" [formData]="mainPageServices.dropOff|async"
+            class="applocationdeails"></app-location>
     </div>
     <button (click)="rentNow()">
         <p>Rent Now</p>

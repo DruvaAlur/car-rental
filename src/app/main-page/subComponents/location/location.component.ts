@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MainPageService } from '../../main-page.service';
 
 @Component({
@@ -10,19 +10,24 @@ import { MainPageService } from '../../main-page.service';
 export class LocationComponent {
   @Input() data: any;
   @Input() heading: any;
-  locationForm: FormGroup;
+  @Input() formData: any;
+  locationForm: FormGroup = new FormGroup({
+    location: new FormControl('', [Validators.required]),
+    date: new FormControl('', [Validators.required]),
+    time: new FormControl('', [Validators.required]),
+  });
   cityList: any[] = [];
-  constructor(private MainPageService: MainPageService) {
-    this.locationForm = new FormGroup({
-      location: new FormControl(''),
-      date: new FormControl(''),
-      time: new FormControl(''),
-    });
+  constructor(public MainPageService: MainPageService) {}
+  getFormValid() {
+    return this.locationForm.valid;
   }
   getFormValue() {
     return this.locationForm.value;
   }
   ngOnInit() {
+    console.log(this.formData);
+
+    this.locationForm.patchValue(this.formData);
     this.MainPageService.getCitiesList();
     this.MainPageService.citiesList.subscribe((cities) => {
       console.log(cities);

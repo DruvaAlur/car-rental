@@ -1,8 +1,10 @@
 <div class="cardContainer">
     <div class="container">
-        <app-location [data]="parentData" [heading]="'Pick - Up'" class="applocationdeails"></app-location>
+        <app-location [data]="parentData" [heading]="'Pick - Up'" [formData]="mainPageService.pickUp|async"
+            class="applocationdeails"></app-location>
         <app-reverse></app-reverse>
-        <app-location [data]="parentData" [heading]="'Drop - Off'" class="applocationdeails"></app-location>
+        <app-location [data]="parentData" [heading]="'Drop - Off'" [formData]="mainPageService.dropOff|async"
+            class="applocationdeails"></app-location>
     </div>
     <div class="cards">
         <app-carcards (rentNow)="commonMethods.rentNow($event)" *ngFor="let i of data$|async" [data]="i"
